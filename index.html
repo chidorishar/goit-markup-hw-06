@@ -83,24 +83,56 @@
 
         <!-- MODAL -->
         <div id="modal-overlay" class="modal-overlay is-hidden">
-          <div class="window flex-vh-centred">
+          <div class="window">
             <button id="modal-button-close" class="button-close flex-vh-centred" type="button">
               <svg class="icon" width="18" height="18">
                 <use href="./images/decoration/icons.svg#close-cross"></use>
               </svg>
             </button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas perspiciatis quidem
-              vero suscipit. Deleniti ipsam consequuntur modi tempore minus, ab dolore a quibusdam
-              est nam! Atque corrupti, nesciunt at eaque totam quo incidunt fugit veniam officia
-              quidem officiis doloremque cupiditate. Accusamus ullam dolor rerum id totam quam
-              debitis ad accusantium laudantium? Dolore accusantium facilis magnam perferendis
-              commodi perspiciatis molestiae quae ipsum dolorem similique? Quam non, inventore
-              doloremque accusamus ratione obcaecati nesciunt voluptatibus mollitia earum dolorum
-              laudantium nisi doloribus ab quidem deserunt quis velit id voluptatum cupiditate ullam
-              possimus! Quis fugit voluptatum dolorum! Repudiandae rerum eveniet quis veniam
-              laudantium officia harum.
-            </p>
+            <h2 class="subtitle">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="form-request" name="callback-request">
+              <ul class="list-fields list-unmarked">
+                <li class="field">
+                  <label class="label">
+                    Имя
+                    <svg class="icon" width="18" height="18">
+                      <use href="./images/decoration/icons.svg#person"></use>
+                    </svg>
+                    <input class="name input" type="text" name="name" id="" />
+                  </label>
+                </li>
+                <li class="field">
+                  <label class="label">
+                    Телефон
+                    <svg class="icon" width="18" height="18">
+                      <use href="./images/decoration/icons.svg#old-phone"></use>
+                    </svg>
+                    <input class="phone input" type="tel" name="phone" />
+                  </label>
+                </li>
+                <li class="field">
+                  <label class="label">
+                    Почта
+                    <svg class="icon" width="18" height="18">
+                      <use href="./images/decoration/icons.svg#envelope-2"></use>
+                    </svg>
+                    <input class="mail input" type="email" name="mail" />
+                  </label>
+                </li>
+                <li class="field">
+                  <label class="label">
+                    Комментарий
+                    <input class="commentary input" type="text" name="commentary" />
+                  </label>
+                </li>
+              </ul>
+              <label class="label-agree">
+                <input type="checkbox" name="checkbox-agree" />
+                Соглашаюсь с рассылкой и принимаю
+                <a href="./" class="link-rules">Условия договора</a>
+              </label>
+              <button class="button-send button-big button">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
