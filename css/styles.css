@@ -21,7 +21,7 @@
   --accent-light-color: #2196f3;
   --accent-light-color-opaque: #2196f3e5;
   --accent-dark-color: #000;
-  --hero-button-hover-color: #188ce8;
+  --button-big-hover-color: #188ce8;
   --hero-background-color: #c4c4c4;
   --icons-logo-main-color: #afb1b8;
   --icons-logo-secondary-color: #fff;
@@ -111,10 +111,40 @@ img {
   cursor: pointer;
 }
 
+.button-big {
+  font-weight: var(--font-bold);
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  padding: 10px 32px;
+
+  background-color: var(--accent-light-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--primary-light-color);
+
+  transition: background-color var(--transition-time) var(--transition-time-function);
+}
+
+.button-big:hover,
+.button-big:focus {
+  background-color: var(--button-big-hover-color);
+}
+
 .container {
   width: var(--container-width);
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.input {
+  transition: border-color var(--transition-time) var(--transition-time-function),
+    color var(--transition-time) var(--transition-time-function);
+}
+
+.input:focus,
+.input:active {
+  border-color: var(--accent-light-color);
+  /* color: var(--accent-light-color); */
 }
 
 .hidden {
@@ -331,12 +361,18 @@ img {
 }
 
 .follow-us-container {
+  margin-right: 93px;
+}
+
+.follow-us-container,
+.form-subscribe {
   padding-top: 12px;
 
   color: var(--primary-light-color);
 }
 
-.follow-us-container .subtitle {
+.follow-us-container .subtitle,
+.form-subscribe .subtitle {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -346,6 +382,47 @@ img {
 
 .follow-us-container .link-clean {
   background-color: #ffffff1a;
+}
+
+.form-subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 570px;
+  min-width: 450px;
+  margin-bottom: -20px;
+}
+
+.input-email {
+  flex-shrink: 0;
+  flex-grow: 1;
+  min-width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+  background-color: transparent;
+  color: inherit;
+}
+
+.input-email::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: #ffffff99;
+}
+
+.button-send {
+  --p-r-l: 28px;
+  margin-bottom: 20px;
+  padding-right: var(--p-r-l);
+  padding-left: var(--p-r-l);
+}
+
+.button-send .icon {
+  margin-left: 10px;
 }
 /*#endregion FOOTER */
 
@@ -379,25 +456,6 @@ img {
 
   margin: 0 auto 30px;
   max-width: 696px;
-}
-
-.section-hero .button {
-  font-weight: var(--font-bold);
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-
-  padding: 10px 32px;
-
-  background-color: var(--accent-light-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--primary-light-color);
-
-  transition: background-color var(--transition-time) var(--transition-time-function);
-}
-
-.section-hero .button:hover,
-.section-hero .button:focus {
-  background-color: var(--hero-button-hover-color);
 }
 /*#endregion hero section */
 
