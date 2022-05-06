@@ -93,45 +93,75 @@
             <form class="form-request" name="callback-request">
               <ul class="list-fields list-unmarked">
                 <li class="field">
-                  <label class="label">
-                    Имя
-                    <svg class="icon" width="18" height="18">
-                      <use href="./images/decoration/icons.svg#person"></use>
-                    </svg>
-                    <input class="name input" type="text" name="name" id="" />
-                  </label>
+                  <label class="label" for="request-name"> Имя </label>
+                  <input
+                    class="name input-text"
+                    type="text"
+                    name="name"
+                    id="request-name"
+                    autocomplete="on"
+                    autofocus
+                    required
+                  />
+                  <svg class="icon" width="18" height="18">
+                    <use href="./images/decoration/icons.svg#person"></use>
+                  </svg>
                 </li>
+
                 <li class="field">
-                  <label class="label">
-                    Телефон
-                    <svg class="icon" width="18" height="18">
-                      <use href="./images/decoration/icons.svg#old-phone"></use>
-                    </svg>
-                    <input class="phone input" type="tel" name="phone" />
-                  </label>
+                  <label class="label" for="request-phone"> Телефон </label>
+                  <input
+                    class="phone input-text"
+                    type="tel"
+                    name="phone"
+                    id="request-phone"
+                    required
+                  />
+                  <svg class="icon" width="18" height="18">
+                    <use href="./images/decoration/icons.svg#old-phone"></use>
+                  </svg>
                 </li>
+
                 <li class="field">
-                  <label class="label">
-                    Почта
-                    <svg class="icon" width="18" height="18">
-                      <use href="./images/decoration/icons.svg#envelope-2"></use>
-                    </svg>
-                    <input class="mail input" type="email" name="mail" />
-                  </label>
+                  <label class="label" for="request-mail"> Почта </label>
+                  <input
+                    class="mail input-text"
+                    type="email"
+                    name="mail"
+                    id="request-mail"
+                    autocomplete="on"
+                    required
+                  />
+                  <svg class="icon" width="18" height="18">
+                    <use href="./images/decoration/icons.svg#envelope-2"></use>
+                  </svg>
                 </li>
+
                 <li class="field">
-                  <label class="label">
-                    Комментарий
-                    <input class="commentary input" type="text" name="commentary" />
-                  </label>
+                  <label class="label" for="request-comment"> Комментарий </label>
+                  <textarea
+                    class="commentary input-text"
+                    name="commentary"
+                    id="request-comment"
+                    placeholder="Введите текст"
+                    rows="5"
+                  ></textarea>
                 </li>
               </ul>
               <label class="label-agree">
-                <input type="checkbox" name="checkbox-agree" />
-                Соглашаюсь с рассылкой и принимаю
-                <a href="./" class="link-rules">Условия договора</a>
+                <input
+                  class="checkbox visually-hidden"
+                  type="checkbox"
+                  name="checkbox-agree"
+                  required
+                />
+                <svg class="icon" width="16" height="16">
+                  <use href="./images/decoration/icons.svg#check"></use>
+                </svg>
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a class="link-agreements" href="./">Условия договора</a>
               </label>
-              <button class="button-send button-big button">Отправить</button>
+              <button class="button-send button-big button" type="submit">Отправить</button>
             </form>
           </div>
         </div>
@@ -664,7 +694,7 @@
         <form class="form-subscribe" name="form-subscribe" autocomplete="on">
           <h2 class="subtitle">Подпишитесь на рассылку</h2>
           <input
-            class="input-email input"
+            class="input-email input-text"
             name="email"
             type="email"
             placeholder="E-mail"
